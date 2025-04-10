@@ -1,0 +1,15 @@
+.container {
+    background-image: url("../../public/wallpaper.jpg");
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+}
