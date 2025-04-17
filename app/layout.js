@@ -1,7 +1,11 @@
 import "./globals.css";
 
 export const metadata = {
-	title: "My First NextJS App",description: "Meu primeiro consumo de API grátis",
+	title: "Rick and Morty API",
+	description: "Meu primeiro consumo de API grátis",
+	icons: {
+		icon: "/rick.png",
+	},
 	};
     
 	export default function RootLayout({ children }) {
