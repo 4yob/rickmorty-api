@@ -3,6 +3,82 @@
     background-attachment: fixed;
     min-height: 100vh;
     padding: 2rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title {
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.searchbar {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 300px;
+    cursor: pointer;
+}
+
+.searchbar:focus {
+    outline: none;
+    border: 1px solid #0cf300;
+}
+
+.searchbar::placeholder {
+    color: #ccc;
+}
+
+.buttonSearch {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #0cf300;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttonSearch:hover {
+    background-color: #0c9f00;
+}
+
+.buttonSearch:active {
+    background-color: #0c7f00;
+}
+
+.buttonReset {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #ff0000;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttonReset:hover {
+    background-color: #c70000;
+}
+
+.buttonReset:active {
+    background-color: #a00000;
+}
+
+.notFound {
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    margin-top: 2rem;
 }
 
 .grid {
