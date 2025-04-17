@@ -36,15 +36,6 @@ export default function Home() {
         const handleButtonClick = (message) => {
             toast.info(message, {
                 position: "top-right",
-                autoClose: 7500,
-                hideProgressBar: false,
-                newestOnTop: false,
-                closeOnClick: true,
-                rtl: false,
-                pauseOnFocusLoss: true,
-                draggable: true,
-                pauseOnHover: true,
-                theme: "dark",
             });
         };
 
