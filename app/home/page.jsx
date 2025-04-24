@@ -24,7 +24,7 @@ export default function Home() {
             const nextCacheKey = `${name}_${nextPageNumber}`;
             
             const cleanCacheIfNeeded = () => {
-                while (cache.size >= 5) {
+                while (cache.size >= 6) {
                     const firstKey = cache.keys().next().value;
                     cache.delete(firstKey);
                     console.log(`♻ Removido do cache: ${firstKey}`);
@@ -67,7 +67,7 @@ export default function Home() {
 
             if (nextPageNumber <= total && !cache.has(nextCacheKey)) {
                 try {
-                    const res = await axios.get(`https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${name}`);
+                    const res = await axios.get(`https://rickandmortyapi.com/api/character/?page=${nextPageNumber}&name=${name}`);
                     cleanCacheIfNeeded();
                     cache.set(nextCacheKey, {
                         results: res.data.results,
@@ -98,6 +98,9 @@ export default function Home() {
         const handleSearch = () => {
             setPage(1);
             fetchCharacters(search, 1);
+            toast.info(`Você buscou por: ${search}`, {
+                position: "top-right",
+            });
         };
 
         const handleReset = () => {
@@ -110,7 +113,7 @@ export default function Home() {
         };
 
         const handleCardClick = (char) => {
-            toast.info(`Você clicou no personagem: ${char.name}`);
+            toast.info(`Você clicou no personagem ${char.name}`);
         };
 
         const [page, setPage] = useState(1);
@@ -172,7 +175,7 @@ export default function Home() {
             ) : (
             <div className={styles.grid}>
                 {characters.map((char) => (
-                <CharacterCard key={char.id} character={char} onClick={() => handleCardClick(char.name)} />
+                <CharacterCard key={char.id} character={char} onClick={() => handleCardClick(char)} />
                 ))}
             </div>
             )}
