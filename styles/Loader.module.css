@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.image {
+    border-radius: 50%;
+}
+
+.message {
+    color: white;
+    padding: 1.25rem;
+}
