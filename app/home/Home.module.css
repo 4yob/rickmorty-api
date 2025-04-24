@@ -108,6 +108,20 @@
     box-shadow: none;
 }
 
+.pageInfo {
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.loading {
+    text-align: center;
+    color: #fff;
+    font-size: 1.25rem;
+    margin-top: 2rem;
+}
+
 .notFound {
     font-size: 1.5rem;
     color: white;
